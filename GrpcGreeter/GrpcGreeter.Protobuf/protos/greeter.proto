@@ -1,0 +1,26 @@
+/*
+ * Copyright (c) 2021 Víctor Vives - All rights reserved.
+ * 
+ * Licensed under the MIT License. 
+ * See LICENSE file in the project root for full license information.
+ */
+
+syntax = "proto3";
+
+package greet;
+
+// The greeter service definition.
+service Greeter {
+  // Procedure that greets a user.
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+// The hello request message containing the user name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The hello response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}

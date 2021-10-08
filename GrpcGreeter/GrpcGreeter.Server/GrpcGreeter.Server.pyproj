@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>c1fac914-6dea-42f9-9855-aded38f950b1</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>GrpcGreeter.Server.py</StartupFile>
+    <StartupFile>server.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="GrpcGreeter.Server.py" />
+    <Compile Include="protos\greeter_pb2.py" />
+    <Compile Include="protos\greeter_pb2_grpc.py" />
+    <Compile Include="server.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrpcGreeter.Protobuf\GrpcGreeter.Protobuf.pyproj">
+      <Name>GrpcGreeter.Protobuf</Name>
+      <Project>{24addae8-d40e-4616-aff8-1a988417d03c}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="protos\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

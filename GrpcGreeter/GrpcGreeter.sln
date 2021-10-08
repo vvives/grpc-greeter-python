@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "GrpcGreeter.Protobuf", "GrpcGreeter.Protobuf\GrpcGreeter.Protobuf.pyproj", "{24ADDAE8-D40E-4616-AFF8-1A988417D03C}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "GrpcGreeter.Server", "GrpcGreeter.Server\GrpcGreeter.Server.pyproj", "{C1FAC914-6DEA-42F9-9855-ADED38F950B1}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "GrpcGreeter.Client", "GrpcGreeter.Client\GrpcGreeter.Client.pyproj", "{34EA7757-51D9-4DC0-8CE1-ABDF48D1274B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,10 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{24ADDAE8-D40E-4616-AFF8-1A988417D03C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{24ADDAE8-D40E-4616-AFF8-1A988417D03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1FAC914-6DEA-42F9-9855-ADED38F950B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1FAC914-6DEA-42F9-9855-ADED38F950B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34EA7757-51D9-4DC0-8CE1-ABDF48D1274B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34EA7757-51D9-4DC0-8CE1-ABDF48D1274B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

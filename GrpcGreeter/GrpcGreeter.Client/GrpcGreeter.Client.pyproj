@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>34ea7757-51d9-4dc0-8ce1-abdf48d1274b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>GrpcGreeter.Client.py</StartupFile>
+    <StartupFile>client.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>GrpcGreeter.Client</Name>
     <RootNamespace>GrpcGreeter.Client</RootNamespace>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="GrpcGreeter.Client.py" />
+    <Compile Include="client.py" />
+    <Compile Include="protos\greeter_pb2.py" />
+    <Compile Include="protos\greeter_pb2_grpc.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrpcGreeter.Protobuf\GrpcGreeter.Protobuf.pyproj">
+      <Name>GrpcGreeter.Protobuf</Name>
+      <Project>{24addae8-d40e-4616-aff8-1a988417d03c}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="protos\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
